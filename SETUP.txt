@@ -1,0 +1,210 @@
+🚀 QUICK SETUP GUIDE - Alice Poulain Café Website
+
+====================================
+STEP 1: Install Dependencies (2 minutes)
+====================================
+
+1. Open Terminal/Command Prompt
+2. Navigate to the project folder:
+   cd "alice pouline cafe"
+
+3. Install Node packages:
+   npm install
+
+Wait for installation to complete...
+
+
+====================================
+STEP 2: Setup Email (Gmail Required)
+====================================
+
+1. Go to: myaccount.google.com/security
+2. Turn ON "2-Step Verification"
+3. Go to: myaccount.google.com/apppasswords
+4. Select Mail + Windows Computer
+5. Copy the 16-character password
+6. Open .env file and paste as EMAIL_PASSWORD
+7. Also change EMAIL_USER to your Gmail
+
+Example:
+EMAIL_USER=your.email@gmail.com
+EMAIL_PASSWORD=abcd efgh ijkl mnop
+
+
+====================================
+STEP 3: Change Owner Login (IMPORTANT!)
+====================================
+
+Open .env file and change:
+
+OWNER_EMAIL=owner@alicepoulain.cafe → your-email@gmail.com
+OWNER_PASSWORD=SecurePassword123! → YourNewPassword123!
+
+
+====================================
+STEP 4: Start the Server
+====================================
+
+In Terminal, run:
+npm start
+
+You should see:
+🚀 Alice Poulain Café Server running on http://localhost:3000
+
+✅ NOW YOU'RE READY!
+
+
+====================================
+HOW TO USE
+====================================
+
+PUBLIC WEBSITE:
+➜ Open browser → http://localhost:3000
+- Browse the beautiful website
+- Click "Reserve Table" to make a reservation
+- Subscribe to newsletter
+- See live offers
+
+OWNER DASHBOARD:
+➜ Click "Owner Portal" (top navbar)
+OR go to http://localhost:3000/login.html
+
+LOGIN with your new credentials:
+- Email: (whatever you set in .env)
+- Password: (whatever you set in .env)
+
+DASHBOARD FEATURES:
+
+📌 OFFERS & NOTICES TAB
+- Add new offers/notices
+- Edit existing ones
+- Delete old offers
+- Changes appear INSTANTLY on website!
+
+📧 NEWSLETTER TAB
+- Send emails to all subscribers
+- See subscriber count
+- Beautiful email templates
+
+📅 RESERVATIONS TAB
+- See all booking requests
+- Change status (Pending → Confirmed)
+- View customer details
+
+👥 SUBSCRIBERS TAB
+- See all email subscribers
+
+
+====================================
+WHAT HAPPENS WHEN SOMEONE VISITS?
+====================================
+
+1. Customer visits website → Sees offers (from your database)
+2. Customer submits reservation → Gets email confirmation + you get notified
+3. Customer subscribes to newsletter → Added to database
+4. You send newsletter → All subscribers get email
+
+
+====================================
+TROUBLESHOOTING
+====================================
+
+Problem: "Cannot GET /"
+→ Make sure npm start is running
+
+Problem: Emails not sending
+→ Check Gmail app password is correct
+→ Check EMAIL_USER has 2FA enabled
+→ Check .env file has correct format
+
+Problem: Server won't start
+→ Close other apps using port 3000
+→ Make sure you ran "npm install" first
+→ Check Node.js is installed: node --version
+
+Problem: Login doesn't work
+→ Check OWNER_EMAIL and OWNER_PASSWORD in .env
+→ Try credentials EXACTLY as in .env
+
+
+====================================
+GOING LIVE (Production)
+====================================
+
+Before deploying:
+1. ✅ Change OWNER_PASSWORD
+2. ✅ Change JWT_SECRET to long random string
+3. ✅ Update EMAIL_USER and EMAIL_PASSWORD
+4. ✅ Test everything locally
+5. ✅ Use HTTPS (not HTTP)
+
+Popular hosting:
+- Heroku (easy)
+- Railway.app (simple)
+- DigitalOcean (powerful)
+
+
+====================================
+GETTING HELP
+====================================
+
+If something isn't working:
+1. Check server console (look for red errors)
+2. Verify .env file has all values
+3. Restart the server (Ctrl+C then npm start)
+4. Check README.md for more details
+
+
+====================================
+IMPORTANT SECURITY NOTES
+====================================
+
+⚠️ NEVER share your .env file
+⚠️ NEVER put passwords in code
+⚠️ CHANGE default passwords
+⚠️ Use strong JWT_SECRET in production
+⚠️ Always use HTTPS on live website
+
+
+====================================
+FILE STRUCTURE
+====================================
+
+alice pouline cafe/
+├── index.html          ← Main website
+├── login.html          ← Owner login
+├── admin.html          ← Owner dashboard
+├── server.js           ← Backend API
+├── database.js         ← Database setup
+├── email.js            ← Email system
+├── package.json        ← Dependencies
+├── .env                ← Your config (EDIT THIS!)
+├── cafe.db             ← Database (auto-created)
+└── README.md           ← Full documentation
+
+
+====================================
+QUICK COMMAND REFERENCE
+====================================
+
+Start server:
+npm start
+
+Install dependencies:
+npm install
+
+Stop server:
+Ctrl+C
+
+Edit configuration:
+Open .env file in text editor
+
+
+====================================
+🎉 YOU'RE ALL SET!
+
+Website: http://localhost:3000
+Admin: http://localhost:3000/login.html
+
+Enjoy your beautiful café website! ☕
+====================================
